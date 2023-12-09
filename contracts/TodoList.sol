@@ -8,6 +8,11 @@ contract TodoList {
     }
     
     Task[] public tasks;
+    
+    constructor() {
+        // Initializing the contract with an empty task to avoid potential deployment issues
+        tasks.push(Task("", false));
+    }
 
     // Adds a new task to the to-do list
     function addTask(string memory _description) public {
@@ -17,7 +22,9 @@ contract TodoList {
     // Removes a specified task from the to-do list
     function removeTask(uint256 _index) public {
         require(_index < tasks.length, "Task index out of bounds");
-        tasks[_index] = tasks[tasks.length - 1];
+        if (_index < tasks.length - 1) {
+            tasks[_index] = tasks[tasks.length - 1];
+        }
         tasks.pop();
     }
 
