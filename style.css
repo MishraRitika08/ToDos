@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.head-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 15px; 
+}
+
+.background{
+    background-image:url('desk.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: none;
+    background-size: cover;
+    opacity: 0.8;
+    position: absolute;
+}
+.container{
+    position: relative;
+    border-radius: 10px;
+    background-color: #42332e;
+    opacity: 0.91;
+    padding: 2%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0px 3px 7px 3px rgb(18, 18, 18);
+   
+}
+h1{
+    color: #d9d6d5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(109, 89, 89);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+   /*---------input button styling------------------------*/
+
+.head-items input {
+    border: none;
+    padding: 8px;
+    width: 420px;
+    border-radius: 5px;
+    height: 45px;
+    background-color: #ffece4af;
+   
+}
+.head-items input:focus{
+    background-color: #f4dbd1af;
+    outline: 2px solid #ff6923;
+    color: rgb(9, 9, 9);
+}
+
+.button{
+    background-color: rgb(116, 70, 54);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    outline: none;
+    width: 60px; 
+    height:60px; 
+    border-radius: 50%;
+    border: none; 
+  
+  }
+  .button:hover{
+    background-color: rgb(56, 20, 7)
+  }
+
+  .button .active{
+    background-color: rgb(43, 15, 5);
+  }
+  .foot-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+
+
+/**improvising buttons ****/
+
+.tooltip-btn {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(27, 14, 0, 0.5);
+    color: white;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .tooltip-btn:hover::after {
+    opacity: 1;
+  }
+  
+/**to do list tasks**/
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .todolist-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(57, 37, 37, 0.708);
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgb(34, 12, 12);
+  }
+  
+  .todolist-items h3{
+    font-size: 25px;
+    color: rgb(234, 234, 234);
+    font-weight: bold;
+    margin: 0px;
+    font-family: Tahoma,Verdana, sans-serif;
+
+  }
+
+  /*  icons styling **/
+
+  .icon{
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /
+  }
+  
+  .icon:hover{
+    transform: scale(1.2);
+  }
+  .secondary-button{
+    color: #6f412d;
+  }
+  .secondary-button:hover{
+    color: #bd5528;
+  }
+  
+
+  .completed-task {
+    text-decoration: line-through; 
+}

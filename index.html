@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+
+        <div class="head-items container-items">
+           <h1>My ToDos</h1>
+           <input type="text" id="input-tasks" placeholder="Add items here.."></input>
+        </div>
+
+        <div class="foot-items ">
+           <button id="add-item" class="button tooltip-btn"  data-tooltip="Add to list"><i class="fa-solid fa-plus icon"></i></button>
+           <button id="get-pending" class="button tooltip-btn" data-tooltip="Get pending tasks"><i class="fa-solid fa-spinner icon"></i></button>
+           <button id="get-completed" class="button tooltip-btn" data-tooltip="Get completed tasks"><i class="fa-solid fa-trash-can icon"></i></button>
+           <button id="delete-all" class="button tooltip-btn" data-tooltip="Clear all tasks"><i class="fa-solid fa-paintbrush"></i></button>
+
+        </div>
+
+
+        <div id="todo-list">
+            <!--
+            <div class="todolist-items">
+                <h3>Task name</h3>
+                <div class="secondary-button tooltip-btn" data-tooltip="Mark done"><i class="fa-solid fa-square-check icon"></i></div>
+            </div>
+            <div class="todolist-items">
+                <h3>Task name</h3>
+                <div class="secondary-button tooltip-btn" data-tooltip="Mark done"><i class="fa-solid fa-square-check icon"></i></div>
+            </div>-->
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript"></script>
+    <script type= "module" src="index1.mjs"></script>
+</body>
+</html>
