@@ -1,7 +1,4 @@
-//import { ethers } from 'ethers';
-//const { ethers } = require('ethers');
 
-//import { ethers } from 'https://cdn.ethers.io/lib/ethers-5.0.umd.min.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
     // Connect to MetaMask
@@ -12,10 +9,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     document.getElementById('add-item').addEventListener('click', addTask);
     
     // Bind click event to get-pending button
-    document.getElementById('get-pending').addEventListener('click', getPendingTasks);
+  //  document.getElementById('get-pending').addEventListener('click', getPendingTasks);
     
     // Bind click event to get-completed button
-    document.getElementById('get-completed').addEventListener('click', getCompletedTasks);
+   // document.getElementById('get-completed').addEventListener('click', getCompletedTasks);
     
     // Bind click event to delete-all button
     document.getElementById('delete-all').addEventListener('click', clearAllTasks);
@@ -25,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function () {
  // const provider = new ethers.providers.JsonRpcProvider('http://127.0.0.1:8545'); // Replace with your Ganache host and port
   
   // Define TodoList contract ABI and address
-  const todoListAddress = '0x79b4782c2bDda34e951E69A51538CcbAAaD516Eb';
+  const todoListAddress = '0xb7Fff6A6eE996720b2fB3D5859b61173Ab4a73e5';
   const todoListABI = [
     {
         "inputs": [],
@@ -286,9 +283,6 @@ async function getCompletedTasks() {
     const taskName = document.createElement('h3');
     taskName.textContent = taskText;
     newTask.appendChild(taskName);
-  
-    // ... other elements or functionalities for the task display ...
-  
     todoList.appendChild(newTask);
   }
   
